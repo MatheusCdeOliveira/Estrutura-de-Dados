@@ -18,7 +18,6 @@ namespace Queue_Stack_Exercises
     // Remove dois elementos da estrutura e os mostra na tela
     // Limpa a estrutura e mostra o número de elementos existentes
 
-
     class Exercicio01
     {
         public static void Executar()
