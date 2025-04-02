@@ -97,7 +97,6 @@ namespace ArrayList_Exercises
                     Console.WriteLine("Opção inválida, tente novamente");
                     break;
             }
-
         }
         while (opcao != 6);
     }

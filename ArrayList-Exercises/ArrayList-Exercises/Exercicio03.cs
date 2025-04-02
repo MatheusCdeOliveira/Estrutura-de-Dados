@@ -55,10 +55,8 @@ namespace ArrayList_Exercises
                         Console.WriteLine("Opção inválida, tente novamente");
                         break;
                 }
-
             }
             while (opcao != 6);
-
 
             void ExibirMenu()
             {
@@ -88,7 +86,6 @@ namespace ArrayList_Exercises
                 } else
                     {
                        valid = true;  
-
                     }
                 }
                 Console.Write("Email do Aluno a ser inserido: ");
@@ -108,7 +105,6 @@ namespace ArrayList_Exercises
                 else
                 {
                     Console.WriteLine("Aluno não encontrado");
-
                 }
                 Console.ReadKey();
             }
@@ -140,6 +136,5 @@ namespace ArrayList_Exercises
             }
         }
 
-        
     }
 }
