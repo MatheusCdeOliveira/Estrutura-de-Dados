@@ -5,18 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Queue_Stack_Exercises
+namespace Queue_Stack_Exercises.Fila
 {
-    // Implemente um programa que contém um objeto do tipo pilha e que leia
+    // Implemente um programa que contém um objeto do tipo fila e que leia
     //10 caracteres.Para cada caractere, se ele for uma letra maiúscula,
-    //insira-o na pilha.Senão, se ele for uma letra minúscula, retire um
-    //caractere da pilha e mostre o na tela.Caso contrário (o caractere não é
-    //uma letra), mostre o próximo elemento a ser removido da pilha
-    class Exercicio04
+    //insira-o na fila.Senão, se ele for uma letra minúscula, retire um
+    //caractere da fila e mostre o na tela.Caso contrário (o caractere não é
+    //uma letra), mostre o próximo elemento a ser removido da fila
+
+    class Exercicio02
     {
         public static void Executar()
         {
-            Stack pilha = new Stack();
+            Queue fila = new Queue();
 
             for (int i = 0; i < 10; i++)
             {
@@ -26,30 +27,27 @@ namespace Queue_Stack_Exercises
                 if (string.IsNullOrEmpty(entrada))
                 {
                     Console.WriteLine("Entrada inválida. Tente novamente.");
-                    i--; // Permite que o usuário insira novamente
+                    i--;
                 }
                 char c = entrada[0];
 
                 if (char.IsUpper(c))
                 {
-                    pilha.Push(c);
+                    fila.Enqueue(c);
                     Console.WriteLine($"Caracter adicionado");
-                }
-                else if (char.IsLower(c))
+                } else if (char.IsLower(c))
                 {
-                    if (pilha.Count > 0)
+                    if (fila.Count > 0)
                     {
-                        Console.WriteLine($"Caracter '{pilha.Pop()}' removido");
-                    }
-                    else
+                        Console.WriteLine($"Caracter '{fila.Dequeue()}' removido");
+                    } else
                     {
                         Console.WriteLine("Fila vazia, não é possivel remover elementos");
                         i--;
                     }
-                }
-                else
+                } else
                 {
-                    Console.WriteLine($"Próximo caracter a ser removido: {pilha.Peek()}");
+                    Console.WriteLine($"Próximo caracter a ser removido: {fila.Peek()}");
                 }
 
             }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Queue_Stack_Exercises
+namespace Queue_Stack_Exercises.Pilha
 
 // Seja a estrutura de pilha, faça um programa que:
 // Insere os números 1, 2, 3, 4 e 5 na estrutura
@@ -18,7 +18,7 @@ namespace Queue_Stack_Exercises
 // Remove dois elementos da estrutura e os mostra na tela
 // Limpa a estrutura e mostra o número de elementos existentes
 {
-    class Exercicio02
+    class Exercicio01
     {
         public static void Executar()
         {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Queue_Stack_Exercises
+namespace Queue_Stack_Exercises.Fila
 {
     // Seja a estrutura de fila, faça um programa que:
     // Insere os números 1, 2, 3, 4 e 5 na estrutura
