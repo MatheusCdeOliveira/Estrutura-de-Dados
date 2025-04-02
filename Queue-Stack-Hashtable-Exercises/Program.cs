@@ -10,7 +10,7 @@ namespace Queue_Stack_Exercises
     {
         static void Main(string[] args)
         {
-            Fila.Exercicio01.Executar();
+            HashTable.Exercicio01.Executar();
         }
     }
 }

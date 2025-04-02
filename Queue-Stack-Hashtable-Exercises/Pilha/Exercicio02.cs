@@ -12,7 +12,7 @@ namespace Queue_Stack_Exercises.Pilha
     //insira-o na pilha.Senão, se ele for uma letra minúscula, retire um
     //caractere da pilha e mostre o na tela.Caso contrário (o caractere não é
     //uma letra), mostre o próximo elemento a ser removido da pilha
-    class Exercicio04
+    class Exercicio02
     {
         public static void Executar()
         {

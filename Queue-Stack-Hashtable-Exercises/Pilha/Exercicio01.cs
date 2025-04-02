@@ -33,7 +33,7 @@ namespace Queue_Stack_Exercises.Pilha
 
             pilha.Pop();
             string check = pilha.Contains(1) ? "sim" : "não";
-            Console.WriteLine($"Existe o número 1 na pilha {check}");
+            Console.WriteLine($"Existe o número 1 na pilha? {check}");
             check = pilha.Contains(5) ? "sim" : "não";
             Console.WriteLine($"Existe o número 5 na pilha? {check}");
 

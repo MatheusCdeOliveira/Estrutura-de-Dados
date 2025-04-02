@@ -44,9 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fila\Exercicio01.cs" />
+    <Compile Include="Hashtable\Exercicio01.cs" />
     <Compile Include="Pilha\Exercicio01.cs" />
     <Compile Include="Fila\Exercicio02.cs" />
-    <Compile Include="Pilha\Exercicio04.cs" />
+    <Compile Include="Pilha\Exercicio02.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
