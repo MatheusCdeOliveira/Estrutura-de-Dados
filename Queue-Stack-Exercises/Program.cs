@@ -10,7 +10,7 @@ namespace Queue_Stack_Exercises
     {
         static void Main(string[] args)
         {
-            Exercicio01.Executar();
+            Exercicio02.Executar();
         }
     }
 }
