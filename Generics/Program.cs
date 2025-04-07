@@ -55,10 +55,27 @@ namespace Generics
         }
         //3 - Faça o método public Queue CopiaQueue(Queue<int> origem) que copia todos os dados do Queue<int> origem e retorna
         //o novo Queue (não genérico) criado.
-
         public static Queue CopiaQueue(Queue<int> origem)
         {
             return new Queue(origem.ToArray());
+        }
+
+        //4 - Faça o método public void VaiProFundo<T> (Stack<T> origem, T elemento) que empilha o elemento passado como parâmetro
+        //no fundo da Stack<T> origem, ao invés de empilhar no topo.
+
+        public static void VaiProFundo<T> (Stack<T> origem, T elemento)
+        {
+            Stack<T> pilha = new Stack<T>();
+            int size = origem.Count;
+            for (int i = 0; i < size; i++)
+            {
+               pilha.Push(origem.Pop());
+            }
+            origem.Push(elemento);
+            for (int i = 0; i < size; i++)
+            {
+                origem.Push(pilha.Pop());
+            }
         }
         static void Main(string[] args)
         {
@@ -86,14 +103,23 @@ namespace Generics
             //}
 
             // Execução exercicio 03
-            foreach (int n in fila)
-            {
-                Console.Write(n + " ");
-            }
-            Console.WriteLine();
-            Queue novaFila = CopiaQueue(fila);
+            //Console.WriteLine();
+            //Queue novaFila = CopiaQueue(fila);
 
-            foreach (int n in novaFila)
+            //foreach (int n in novaFila)
+            //{
+            //    Console.Write(n + " ");
+            //}
+            
+            // Execução exercicio 04
+            Stack<int> pilha = new Stack<int>();
+            for (int i = 0; i <= 9; i++)
+            {
+                pilha.Push(i * 10);
+            }
+            VaiProFundo(pilha, 500);
+
+            foreach (int n in pilha)
             {
                 Console.Write(n + " ");
             }
