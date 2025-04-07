@@ -77,6 +77,23 @@ namespace Generics
                 origem.Push(pilha.Pop());
             }
         }
+
+        // 5 - Faça o método public void InverteQueue<T> (Queue<T> q) que inverte a ordem dos elementos da Queue<T> q, no próprio Queue.
+        // Fique à vontade para utilizar outras estruturas que julgar necessárias. Nesse exercício, você não deve utilizar o método Reverse.
+        public static void InverteQueue<T> (Queue<T> q)
+        {
+            Stack<T> pilha = new Stack<T>();
+            for (int i = 0; q.Count > 0; i++)
+            {
+                pilha.Push(q.Dequeue());
+            }
+
+            for (int i = 0; pilha.Count > 0; i++)
+            {
+                q.Enqueue(pilha.Pop());
+            }
+        }
+
         static void Main(string[] args)
         {
             // Execução exercicio 01
@@ -110,16 +127,23 @@ namespace Generics
             //{
             //    Console.Write(n + " ");
             //}
-            
-            // Execução exercicio 04
-            Stack<int> pilha = new Stack<int>();
-            for (int i = 0; i <= 9; i++)
-            {
-                pilha.Push(i * 10);
-            }
-            VaiProFundo(pilha, 500);
 
-            foreach (int n in pilha)
+            // Execução exercicio 04
+            //Stack<int> pilha = new Stack<int>();
+            //for (int i = 0; i <= 9; i++)
+            //{
+            //    pilha.Push(i * 10);
+            //}
+            //VaiProFundo(pilha, 500);
+
+            //foreach (int n in pilha)
+            //{
+            //    Console.Write(n + " ");
+            //}
+
+            // Execução exercicio 05
+            InverteQueue(fila);
+            foreach (int n in fila)
             {
                 Console.Write(n + " ");
             }
