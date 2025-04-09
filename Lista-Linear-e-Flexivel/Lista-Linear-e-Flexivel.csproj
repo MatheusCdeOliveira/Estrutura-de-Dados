@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListaLinear\Lista.cs" />
     <Compile Include="TAD\Exercicio1Fila.cs" />
     <Compile Include="TAD\Exercicio2Pilha.cs" />
     <Compile Include="TAD\Exercicio3Fila.cs" />
