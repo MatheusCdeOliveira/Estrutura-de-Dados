@@ -39,12 +39,13 @@ namespace Lista_Linear_e_Flexivel
 
             Console.Write("Apos insercoes: ");
             lista.Mostrar();
-
+            lista.Inverter();
+            lista.Mostrar();
             x1 = lista.RemoverInicio();
             x2 = lista.RemoverFim();
             x3 = lista.Remover(2);
 
-            Console.Write("Apos remocoes (" + x1 + ", " + x2 + ", " + x3 + "):");
+            Console.Write("\nApos remocoes (" + x1 + ", " + x2 + ", " + x3 + "):");
             lista.Mostrar();
         }
     }

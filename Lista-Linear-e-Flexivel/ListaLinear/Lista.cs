@@ -98,8 +98,7 @@ namespace Lista_Linear
         {
             if (count == 0)
             {
-                Console.Write("Erro, lista vazia");
-                return 0;
+                throw new InvalidOperationException("Não é possível remover, a lista está vazia.");
             }
 
             int response = array[count];
@@ -112,8 +111,7 @@ namespace Lista_Linear
         {
             if (count == 0 || pos >= array.Length || pos < 0)
             {
-                Console.Write("Erro, lista vazia");
-                return 0;
+                throw new InvalidOperationException("Não é possível remover, a lista está vazia.");
             }
             int response = array[pos];
             count--;
@@ -143,6 +141,22 @@ namespace Lista_Linear
                 response = (array[i] == x);
             }
             return response;
+        }
+
+        public void Inverter()
+        {
+            if (count == 0)
+            {
+                throw new InvalidOperationException("Não é possível inverter, a lista está vazia.");
+            }
+            int start = 0;
+            int end = count - 1;
+            while (start < end)
+            {
+                (array[end], array[start]) = (array[start], array[end]);
+                start++;
+                end--;
+            }
         }
     }
 
